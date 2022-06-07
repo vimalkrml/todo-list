@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="h-[100vh] bg-[#eff6ff]">
+    <div
+      class="container w-full sm:w-[75%] lg:w-[50%] absolute min-h-[100px] top-[50%] left-[50%] bg-white rounded-lg border-2"
+    >
+      <div class="flex justify-between py-6 px-7">
+        <h1 class="font-primary font-extrabold text-xl md:text-3xl">
+          Hello To-Do
+        </h1>
+        <div class="flex gap-8">
+          <p class="font-primary font-semibold cursor-pointer">To-do</p>
+          <p class="font-primary font-semibold cursor-pointer">Users</p>
+        </div>
+      </div>
+      <div id="newtask" class="relative px-7">
+        <input
+          type="text"
+          placeholder="Add to-do item"
+          class="w-[75%] h-10 text-lg bg-[#f3f4f6] border-solid border-2 border-[#d1d3d4] p-3 text-[#111111] font-primary font-medium relative rounded-md focus:outline-none focus:border-[#d1d3d4]"
+        />
+        <button
+          id="push"
+          class="relative float-right w-[20%] h-10 rounded-md font-medium text-base bg-[#3b82f6] border-none text-white cursor-pointer outline-none font-primary"
+        >
+          Add Item
+        </button>
+      </div>
+      <div id="tasks" class="bg-white px-7 py-5 mt-2 rounded-md relative"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
