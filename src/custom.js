@@ -18,8 +18,7 @@ function addTodo(item) {
     if (item !== '') {
         const todo = {
             id: Math.random().toString(),
-            name: item,
-            completed: false
+            name: item
         };
         todos.push(todo);
         addToLocalStorage(todos);
@@ -49,20 +48,11 @@ function addToLocalStorage(todos) {
 
 function getFromLocalStorage() {
     let localTodos = localStorage.getItem('todos');
-    console.log(JSON.parse(localTodos));
+    // console.log(JSON.parse(localTodos));
     if (localTodos) {
         todos = JSON.parse(localTodos);
         refreshLayout(todos);
     }
-}
-
-function toggle(id) {
-    todos.forEach(function (item) {
-        if (item.id == id) {
-            item.completed = !item.completed;
-        }
-    });
-    addToLocalStorage(todos);
 }
 
 function deleteTodo(id) {
