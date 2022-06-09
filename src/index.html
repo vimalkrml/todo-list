@@ -7,9 +7,9 @@
     <title>ToDo Vimal</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="h-[100vh] bg-[#eff6ff]">
+  <body class="bg-[#eff6ff] flex justify-center mt-20">
     <div
-      class="container w-full sm:w-[75%] lg:w-[50%] absolute min-h-[100px] top-[50%] left-[50%] bg-white rounded-lg border-2"
+      class="container pb-7 w-full sm:w-[75%] lg:w-[50%] min-h-[100px] bg-white rounded-lg border-2"
     >
       <div class="flex justify-between py-6 px-7">
         <h1 class="font-primary font-extrabold text-xl md:text-3xl">
@@ -20,22 +20,27 @@
           <p class="font-primary font-semibold cursor-pointer">Users</p>
         </div>
       </div>
-      <div id="newtask" class="relative px-7">
+      <form class="todo-form relative px-7 mb-3">
         <input
           type="text"
-          id="myInput"
           placeholder="Add to-do item"
-          class="w-[75%] h-10 text-lg bg-[#f3f4f6] border-solid border-2 border-[#d1d3d4] p-3 text-[#111111] font-primary font-medium relative rounded-md focus:outline-none focus:border-[#d1d3d4]"
+          class="todo-input w-[75%] h-10 text-lg bg-[#f3f4f6] border-solid border-2 border-[#d1d3d4] p-3 text-[#111111] font-primary font-medium rounded-md focus:outline-none focus:border-[#d1d3d4]"
         />
         <button
-          id="push"
-          class="relative float-right w-[20%] h-10 rounded-md font-medium text-base bg-[#3b82f6] border-none text-white cursor-pointer outline-none font-primary"
+          type="submit"
+          class="add-button float-right w-[20%] h-10 rounded-md font-medium text-base bg-[#3b82f6] border-none text-white cursor-pointer outline-none font-primary"
         >
           Add Item
         </button>
-      </div>
-      <div id="tasks" class="bg-white px-7 py-5 mt-2 rounded-md relative"></div>
+      </form>
+      <ul class="todo-items pages">
+        <!-- dummy item -->
+        <li class="item">
+          Vimal
+          <button class="delete-button">Delete</button>
+        </li>
+      </ul>
     </div>
-    <script src="./main.js"></script>
+    <script src="./custom.js"></script>
   </body>
 </html>

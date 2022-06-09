@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Exo 2', 'sans-serif'],
+
       },
     }
   },
